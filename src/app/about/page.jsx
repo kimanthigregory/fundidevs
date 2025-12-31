@@ -4,7 +4,7 @@ export default function About() {
   const timeline = [
     {
       title: "The Spark",
-      desc: "It began with tearing apart radios to see how they worked. That tactile curiosity transferred to the screen.",
+      desc: "It beagan with watching hacking scenes in movies which to me was much cooler than any other superpower, the ability to bend computers to my will sparked a curiosity that was unstoppable. That tactile curiosity transferred to the screen.",
       color: "rust",
     },
     {
