@@ -1,68 +1,64 @@
-import { Cpu } from "lucide-react";
+import { User, Heart, Briefcase } from "lucide-react";
 
 export default function About() {
-  const timeline = [
-    {
-      title: "The Spark",
-      desc: "It beagan with watching hacking scenes in movies which to me was much cooler than any other superpower, the ability to bend computers to my will sparked a curiosity that was unstoppable. That tactile curiosity transferred to the screen.",
-      color: "rust",
-    },
-    {
-      title: "The Struggle",
-      desc: "We saw agencies churning out cookie-cutter templates. Soulless. Fragile. We rejected the 'fast and cheap' model.",
-      color: "concrete",
-    },
-    {
-      title: "The Philosophy",
-      desc: "'Fundi' implies a master craftsman. We treat every pixel and database query with the respect a carpenter treats a joint.",
-      color: "lime",
-    },
-  ];
-
   return (
-    <section className="py-24 relative">
-      <div className="max-w-6xl mx-auto px-6 relative z-10">
-        <div className="md:grid md:grid-cols-2 gap-16">
-          <div className="mb-12 md:mb-0">
-            <h2 className="font-mono text-fundi-lime text-sm uppercase tracking-widest mb-4">
-              01. Origin Story
-            </h2>
-            <h3 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-              From Soldering Irons to Syntax.
-            </h3>
-            <p className="text-fundi-concrete text-lg mb-8 font-serif">
-              FundiDevs isn't a startup born in a boardroom. It started in a
-              garage, amidst the smell of burnt solder and the hum of old
-              servers.
-            </p>
-            {/* Image Placeholder styled as a Polaroid/Schematic */}
-            <div className="relative w-full aspect-square bg-slate-800/50 border border-white/10 p-4 rotate-2">
-              <div className="w-full h-full bg-black/40 flex items-center justify-center border border-dashed border-white/20">
-                <Cpu className="w-16 h-16 text-fundi-concrete" />
-              </div>
-            </div>
-          </div>
+    <section className="py-24 relative min-h-screen">
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
+        <div className="mb-16">
+          <h2 className="font-mono text-fundi-lime text-sm uppercase tracking-widest mb-4">
+            01. The Founder
+          </h2>
+          <h3 className="text-4xl md:text-6xl font-bold mb-8 text-white">
+            The Heart Behind the Code.
+          </h3>
 
-          <div className="space-y-12 border-l border-white/10 pl-8 relative">
-            {timeline.map((item, index) => (
-              <div key={index} className="relative group">
-                <span
-                  className={`absolute -left-[39px] top-1 w-5 h-5 bg-fundi-dark border-2 rounded-full ${
-                    item.color === "rust"
-                      ? "border-fundi-rust"
-                      : item.color === "lime"
-                      ? "border-fundi-lime"
-                      : "border-fundi-concrete"
-                  }`}
-                ></span>
-                <h4 className="font-mono text-xl text-white mb-2">
-                  {item.title}
-                </h4>
-                <p className="text-fundi-concrete leading-relaxed font-serif">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
+          <div className="prose prose-invert prose-lg prose-p:font-serif prose-p:text-fundi-concrete prose-headings:font-mono prose-headings:text-white">
+            <p>
+              For years, I lived two lives. By day, I watched brilliant local
+              businesses struggle to be seen. They had amazing products but no
+              "digital home." By night, I was at my desk, obsessively learning
+              the craft of software development—not just for fun, but because I
+              saw the gap.
+            </p>
+            <p>
+              I realized that <strong>code is just a tool.</strong> The real
+              mission is helping a business grow from a "hustle" to a "brand."
+            </p>
+            <p>
+              I founded <strong>FundiDevs</strong> to bridge that gap. The name{" "}
+              <em>Fundi</em> implies a master craftsman—someone you trust to
+              fix, build, and improve. That is who we are. We don't just hand
+              you a website and disappear; we become your technical partners,
+              guiding you through the digital world like a concierge in a luxury
+              hotel.
+            </p>
+          </div>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8 border-t border-white/10 pt-12">
+          <div className="space-y-4">
+            <Heart className="w-8 h-8 text-fundi-rust" />
+            <h4 className="font-mono text-xl text-white">Passion First</h4>
+            <p className="text-fundi-concrete text-sm font-serif">
+              Tech isn't just a job; it's a craft. We obsess over details so you
+              don't have to.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <User className="w-8 h-8 text-fundi-lime" />
+            <h4 className="font-mono text-xl text-white">Human Centric</h4>
+            <p className="text-fundi-concrete text-sm font-serif">
+              We speak plain English, not "Developer." We explain every step
+              clearly.
+            </p>
+          </div>
+          <div className="space-y-4">
+            <Briefcase className="w-8 h-8 text-fundi-amber" />
+            <h4 className="font-mono text-xl text-white">Business Focused</h4>
+            <p className="text-fundi-concrete text-sm font-serif">
+              A pretty website is useless if it doesn't sell. We build for
+              conversion.
+            </p>
           </div>
         </div>
       </div>

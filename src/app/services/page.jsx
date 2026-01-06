@@ -1,61 +1,80 @@
-import { LayoutGrid, Database, Fingerprint } from "lucide-react";
+import {
+  LayoutGrid,
+  TrendingUp,
+  Cpu,
+  Users,
+  GraduationCap,
+} from "lucide-react";
+import Link from "next/link";
 
 export default function Services() {
   const services = [
     {
-      title: "Digital Architecture",
-      desc: "Full-scale frontend development. Not just 'websites,' but immersive digital environments.",
+      title: "Custom Web Development",
+      desc: "Your digital headquarters. We build fast, mobile-friendly sites that turn visitors into customers.",
       icon: <LayoutGrid />,
-      tools: ["React", "Next.js", "WebGL"],
-      class:
-        "md:col-span-2 md:row-span-2 bg-slate-800/20 border-fundi-lime/20 hover:border-fundi-lime/50",
+      detail:
+        "Not just a template. A custom build that reflects your unique brand.",
     },
     {
-      title: "System Forging",
-      desc: "Backend engineering. The steel beams behind the drywall.",
-      icon: <Database />,
-      tools: ["Node.js", "PostgreSQL"],
-      class:
-        "bg-slate-800/20 border-fundi-amber/20 hover:border-fundi-amber/50",
+      title: "SEO Growth",
+      desc: "Get found on Google. We optimize your site so you appear when clients search for your services.",
+      icon: <TrendingUp />,
+      detail: "Keyword research, content strategy, and technical optimization.",
     },
     {
-      title: "User Mechanics",
-      desc: "UX/UI Design. Ensuring the machine feels human.",
-      icon: <Fingerprint />,
-      tools: ["Figma", "Framer"],
-      class: "bg-slate-800/20 border-fundi-rust/20 hover:border-fundi-rust/50",
+      title: "Custom Software",
+      desc: "Automate your workflow. From inventory systems to client portals, we build tools that save you time.",
+      icon: <Cpu />,
+      detail: "Tailored specifically to how your business operates.",
+    },
+    {
+      title: "IT Consultancy",
+      desc: "Your tech partner. We help you choose the right tools and strategies to stay ahead.",
+      icon: <Users />,
+      detail: "Expert advice on software, security, and digital strategy.",
+    },
+    {
+      title: "WebDev Training",
+      desc: "Master the craft. Personalized training for individuals or teams who want to learn coding.",
+      icon: <GraduationCap />,
+      detail: "Hands-on mentorship from industry experts.",
     },
   ];
 
   return (
     <section className="py-24">
       <div className="max-w-7xl mx-auto px-6">
-        <h2 className="font-mono text-fundi-rust text-sm uppercase tracking-widest mb-12">
-          02. The Toolbox
-        </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 md:grid-rows-2 gap-6 md:h-[600px]">
+        <div className="flex flex-col md:flex-row justify-between items-end mb-16">
+          <div>
+            <h2 className="font-mono text-fundi-rust text-sm uppercase tracking-widest mb-4">
+              02. The Toolkit
+            </h2>
+            <h3 className="text-4xl md:text-5xl font-bold text-white">
+              Services We Offer.
+            </h3>
+          </div>
+          <Link
+            href="/pricing"
+            className="mt-4 md:mt-0 text-fundi-lime font-mono border-b border-fundi-lime hover:text-white hover:border-white transition-colors"
+          >
+            View Pricing Options
+          </Link>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {services.map((s, i) => (
             <div
               key={i}
-              className={`border p-8 transition-all group flex flex-col justify-between ${s.class}`}
+              className="bg-slate-900/20 border border-white/5 p-8 hover:border-fundi-lime/50 transition-all group"
             >
-              <div>
-                <div className="w-12 h-12 flex items-center justify-center mb-6 bg-white/5 rounded-sm text-white">
-                  {s.icon}
-                </div>
-                <h3 className="text-2xl font-bold text-white mb-2">
-                  {s.title}
-                </h3>
-                <p className="text-fundi-concrete font-serif">{s.desc}</p>
+              <div className="w-12 h-12 flex items-center justify-center mb-6 bg-white/5 rounded-sm text-fundi-lime group-hover:scale-110 transition-transform">
+                {s.icon}
               </div>
-              <div className="mt-8 pt-4 border-t border-white/5">
-                <div className="flex gap-2 font-mono text-xs text-white">
-                  {s.tools.map((t) => (
-                    <span key={t} className="bg-white/5 px-2 py-1">
-                      {t}
-                    </span>
-                  ))}
-                </div>
+              <h3 className="text-2xl font-bold text-white mb-3">{s.title}</h3>
+              <p className="text-fundi-concrete font-serif mb-4">{s.desc}</p>
+              <div className="text-xs font-mono text-white/40 border-t border-white/5 pt-4">
+                {s.detail}
               </div>
             </div>
           ))}

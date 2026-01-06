@@ -8,9 +8,12 @@ export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
+  // Inside navLinks array:
   const navLinks = [
     { name: "The Journey", href: "/about" },
-    { name: "Toolbox", href: "/services" },
+    { name: "Services", href: "/services" },
+    { name: "Work", href: "/work" },
+    { name: "Pricing", href: "/pricing" },
     { name: "Journal", href: "/blog" },
   ];
 
