@@ -1,28 +1,48 @@
 import Link from "next/link";
 import { Terminal, ArrowRight } from "lucide-react";
 
-// Mock Data (In the future, fetch this from Sanity/Contentful)
+// Updated Content Data optimized for "Preparation & Process" search intent
 const POSTS = [
   {
-    slug: "abandoning-generic-css",
-    title: "Why We Abandoned 'Generic' CSS Frameworks",
-    date: "2023-10-12",
-    readTime: "4 MIN",
-    tag: "ENGINEERING",
+    slug: "website-checklist-for-new-businesses",
+    title: "The Ultimate New Business Website Checklist",
+    date: "2026-02-12",
+    readTime: "5 MIN",
+    tag: "GETTING STARTED",
     excerpt:
-      "Generic templates breed generic businesses. We analyzed the load time impact of custom utility classes vs. heavy libraries.",
-    snippet:
-      ".btn-generic { display: block; } // Bad \n.btn-fundi { @apply tactile-shadow; } // Good",
+      "Don't hire a designer just yet. Here are the 5 essential assets (branding, copy, and images) you need to have ready to save money and speed up the build.",
+    // Pseudo-code snippet to maintain the 'Engineering' aesthetic
+    snippet: `// Pre-Flight_Checklist.json
+{
+  "logo_vectors": "READY",
+  "brand_colors": "DEFINED",
+  "service_copy": "DRAFTED",
+  "competitor_list": "COMPILED"
+}`,
   },
   {
-    slug: "technical-debt-cost",
-    title: "The Actual Cost of Technical Debt",
-    date: "2023-11-05",
-    readTime: "6 MIN",
-    tag: "PHILOSOPHY",
+    slug: "website-design-timeline",
+    title: "How Long Does It Take to Build a Business Website?",
+    date: "2026-02-05",
+    readTime: "4 MIN",
+    tag: "PLANNING",
     excerpt:
-      "Cutting corners in the foundation phase creates cracks in the penthouse. A case study on refactoring a legacy monolith.",
+      "Is it 2 weeks or 2 months? We break down the realistic timeline for a custom site build versus a template, and how to launch faster.",
     snippet: null,
+  },
+  {
+    slug: "domains-and-hosting-explained",
+    title: "Domain Names & Hosting Explained: A Founder's Guide",
+    date: "2026-01-28",
+    readTime: "6 MIN",
+    tag: "TECHNICAL GUIDE",
+    excerpt:
+      "Confused by the jargon? We explain the difference between your domain (address) and hosting (land) so you never overpay for tech you don't need.",
+    snippet: `const mental_model = {
+  domain: "The Street Address",
+  hosting: "The Plot of Land",
+  website: "The House You Build"
+};`,
   },
 ];
 
@@ -36,7 +56,7 @@ export default function Blog() {
               03. The Knowledge Hub
             </h2>
             <h1 className="text-4xl md:text-5xl font-bold text-white">
-              Engineering Logs.
+              Founder Resources.
             </h1>
           </div>
           <Terminal className="text-fundi-concrete w-8 h-8 hidden md:block" />
@@ -74,7 +94,7 @@ export default function Blog() {
                   )}
 
                   <div className="flex items-center gap-2 text-fundi-lime font-mono text-sm uppercase tracking-widest group-hover:gap-4 transition-all">
-                    Read Log <ArrowRight className="w-4 h-4" />
+                    Read Article <ArrowRight className="w-4 h-4" />
                   </div>
                 </div>
               </article>
