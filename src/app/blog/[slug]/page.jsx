@@ -237,7 +237,28 @@ const CONTENT_MAP = {
     ),
   },
 };
+export async function generateMetadata({ params }) {
+  const resolvedParams = await params;
+  const post = CONTENT_MAP[resolvedParams.slug];
 
+  if (!post) {
+    return {
+      title: "Article Not Found",
+      description: "The requested article could not be found.",
+    };
+  }
+
+  return {
+    title: post.title,
+    description: post.description,
+    openGraph: {
+      title: post.title,
+      description: post.description,
+      type: "article",
+      url: `/blog/${resolvedParams.slug}`,
+    },
+  };
+}
 export default async function BlogPost({ params }) {
   // AWAIT the params to fix the Next.js 15 error
   const resolvedParams = await params;

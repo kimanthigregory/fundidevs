@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { Terminal, ArrowRight } from "lucide-react";
-
+export const metadata = {
+  title: "Founder Resources & Engineering Logs | The Knowledge Hub",
+  description:
+    "Expert advice on web development, hosting, and digital strategy designed to help new business owners navigate the technical landscape.",
+  alternates: {
+    canonical: "/blog",
+  },
+};
 // Updated Content Data optimized for "Preparation & Process" search intent
 const POSTS = [
   {

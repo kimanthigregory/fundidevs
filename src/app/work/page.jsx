@@ -1,6 +1,13 @@
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
-
+export const metadata = {
+  title: "Our Work | Case Studies in Digital Excellence",
+  description:
+    "Browse our portfolio of custom-built websites and digital products. See how we’ve helped startups and established brands achieve 2x performance gains.",
+  alternates: {
+    canonical: "/work",
+  },
+};
 export default function Work() {
   const cases = [
     {

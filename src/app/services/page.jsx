@@ -6,7 +6,19 @@ import {
   GraduationCap,
 } from "lucide-react";
 import Link from "next/link";
-
+export const metadata = {
+  title: "Strategic Web Services | Design, Dev & SEO",
+  description:
+    "Explore our core capabilities: from custom React development and technical SEO to brand identity and UI/UX design optimized for conversion.",
+  alternates: {
+    canonical: "/services",
+  },
+  openGraph: {
+    title: "Web Design & Development Services | Fundi",
+    description:
+      "Transforming your business goals into technical reality with our full-stack services.",
+  },
+};
 export default function Services() {
   const services = [
     {

@@ -1,6 +1,18 @@
 import Link from "next/link";
 import { Check } from "lucide-react";
-
+export const metadata = {
+  title: "Transparent Pricing & Packages | Custom Web Solutions",
+  description:
+    "Flexible pricing models for every stage of growth. From MVP launches to enterprise-grade custom engineering. See our investment tiers and ROI-driven approach.",
+  alternates: {
+    canonical: "/pricing",
+  },
+  openGraph: {
+    title: "Website Design Investment & Pricing | Fundi",
+    description:
+      "Get a clear breakdown of our web development packages and custom engineering rates.",
+  },
+};
 export default function Pricing() {
   const tiers = [
     {

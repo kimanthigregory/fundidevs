@@ -17,8 +17,23 @@ const lora = Lora({
 });
 
 export const metadata = {
-  title: "FundiDevs | Digital Craftsmanship",
-  description: "We do not just write code. We build legacies.",
+  metadataBase: new URL("https://www.yourdomain.com"), // Replace with your actual domain
+  title: {
+    default: "Fundi | Custom Web Design & Development for Business",
+    template: "%s | Fundi", // This adds "| Fundi" to every page title automatically
+  },
+  description:
+    "We build high-performance custom websites for businesses that want to grow. No templates, just results-driven engineering.",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://www.yourdomain.com",
+    siteName: "Fundi",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({ children }) {

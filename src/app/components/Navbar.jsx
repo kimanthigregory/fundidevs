@@ -1,14 +1,14 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Hammer, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 
 export default function Navbar() {
   const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
 
-  // Inside navLinks array:
   const navLinks = [
     { name: "The Journey", href: "/about" },
     { name: "Services", href: "/services" },
@@ -22,15 +22,21 @@ export default function Navbar() {
   return (
     <nav className="fixed w-full z-40 bg-fundi-dark/90 backdrop-blur-md border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-        {/* Logo */}
+        {/* LOGO SECTION */}
         <Link
           href="/"
-          className="flex items-center gap-2 font-mono text-xl tracking-tighter text-fundi-lime hover:opacity-80 transition-opacity"
+          className="flex items-center hover:opacity-80 transition-opacity"
         >
-          <Hammer className="w-6 h-6" />
-          <span className="font-bold">
-            FundiDevs<span className="text-fundi-rust">_</span>
-          </span>
+          {/* UPDATED IMAGE SIZE HERE */}
+          <Image
+            src="/logo.png"
+            alt="FundiDevs Logo"
+            width={180}
+            height={40}
+            // Changed from 'h-10' to 'h-14' (56px) or 'h-16' (64px) to make it larger
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}

@@ -1,5 +1,12 @@
 import { User, Heart, Briefcase } from "lucide-react";
-
+export const metadata = {
+  title: "The Philosophy Behind Fundi | About Our Studio",
+  description:
+    "We believe in craft over templates. Learn about our engineering-led approach to web design and our commitment to building the future of the web.",
+  alternates: {
+    canonical: "/about",
+  },
+};
 export default function About() {
   return (
     <section className="py-24 relative min-h-screen">
