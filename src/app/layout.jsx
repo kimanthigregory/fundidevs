@@ -2,6 +2,7 @@ import { Space_Mono, Lora } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import WhatsAppWidget from "./components/WhatsAppWidget";
 
 // Industrial Mono font for headers
 const spaceMono = Space_Mono({
@@ -66,7 +67,10 @@ export default function RootLayout({ children }) {
         <div className="fixed inset-0 pointer-events-none z-50 opacity-[0.05] bg-grain mix-blend-overlay"></div>
 
         <Navbar />
-        <main className="min-h-screen pt-20">{children}</main>
+        <main className="min-h-screen pt-20">
+          {children}
+          <WhatsAppWidget />
+        </main>
         <Footer />
       </body>
     </html>
