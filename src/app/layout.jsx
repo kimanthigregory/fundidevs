@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppWidget from "./components/WhatsAppWidget";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 // Industrial Mono font for headers
 const spaceMono = Space_Mono({
@@ -73,6 +74,7 @@ export default function RootLayout({ children }) {
         </main>
         <Footer />
       </body>
+      <GoogleAnalytics gaId="G-VTYG62WGM6" />
     </html>
   );
 }
