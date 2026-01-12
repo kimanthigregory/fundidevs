@@ -72,6 +72,26 @@ export default function Home() {
             </Link>
           </div>
         </div>
+        <div className="hidden md:block col-span-4 bg-slate-800/30 border border-white/5 backdrop-blur-sm p-6 rounded-sm font-mono text-xs">
+          {/* Static content or a Client Component for live numbers */}
+          <div className="text-fundi-lime uppercase mb-4 border-b border-white/10 pb-2">
+            ## System Metrics
+          </div>
+          <div className="space-y-4 text-fundi-concrete">
+            <div className="flex justify-between">
+              <span>Uptime:</span> <span className="text-white">99.99%</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Bugs Squashed:</span>{" "}
+              <span className="text-fundi-rust">4,021</span>
+            </div>
+            <div className="mt-4 pt-4 border-t border-white/10 italic opacity-50">
+              {`> initializing craft.exe...`}
+              <br />
+              {`> done.`}
+            </div>
+          </div>
+        </div>
       </section>
 
       {/* THE PROBLEM SECTION */}
