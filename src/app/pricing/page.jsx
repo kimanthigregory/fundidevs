@@ -8,7 +8,7 @@ export const metadata = {
     canonical: "/pricing",
   },
   openGraph: {
-    title: "Website Design Investment & Pricing | Fundi",
+    title: "Website Design Investment & Pricing | Fundidevs",
     description:
       "Get a clear breakdown of our web development packages and custom engineering rates.",
   },
@@ -17,7 +17,7 @@ export default function Pricing() {
   const tiers = [
     {
       name: "The Starter Forge",
-      price: "KES 35,000 - 45,000",
+      price: "Starting from ksh 25,000",
       desc: "Ideal for startups and individuals looking to get official.",
       features: [
         "3-5 Custom Pages",
@@ -32,7 +32,7 @@ export default function Pricing() {
     },
     {
       name: "The Business Build",
-      price: "KES 60,000 - 90,000",
+      price: "Starting from ksh 50,000",
       desc: "Perfect for growing businesses that need to showcase multiple services.",
       features: [
         "Up to 10 Custom Pages",
@@ -48,7 +48,7 @@ export default function Pricing() {
     },
     {
       name: "Master Architecture",
-      price: "From KES 120,000",
+      price: "Starting from ksh 100,000",
       desc: "Custom solutions for companies needing specific software or e-commerce.",
       features: [
         "Fully Custom Functionality",
